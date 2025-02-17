@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/AtefBN/esgpullUtilties git:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-teal-walrus.sh
-        container: qc.acc_messy-gamboge-hyena
+        - /usr/bin/env sh .sqa/script.sunny-chartreuse-goat.sh
+        container: qc.acc_pasty-grey-bison
   QC.Doc:
     repos:
       github.com/AtefBN/esgpullUtilties find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-tan-kiwi.sh
-        container: qc.doc_beady-smalt-paradise
+        - /usr/bin/env sh .sqa/script.freaky-smalt-angora.sh
+        container: qc.doc_blurry-lavender-warthog
       github.com/AtefBN/esgpullUtilties git:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-emerald-dingo.sh
-        container: qc.doc_sloppy-white-horse
+        - /usr/bin/env sh .sqa/script.lumpy-gold-shark.sh
+        container: qc.doc_paltry-apricot-oyster
       github.com/AtefBN/esgpullUtilties markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-myrtle-barb.sh
-        container: qc.doc_ugly-yellow-wolverine
+        - /usr/bin/env sh .sqa/script.wheezy-cornflower-turkey.sh
+        container: qc.doc_skimpy-seashell-zebra
   QC.Lic:
     repos:
       github.com/AtefBN/esgpullUtilties licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-russet-newt.sh
-        container: qc.lic_homely-chestnut-dolphin
+        - /usr/bin/env sh .sqa/script.stuffy-emerald-abyssinian.sh
+        container: qc.lic_wimpy-razzmatazz-lemming
   QC.Sec:
     repos:
       github.com/AtefBN/esgpullUtilties bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-flax-vole.sh
-        container: qc.sec_goopy-lilac-okapi
+        - /usr/bin/env sh .sqa/script.sleazy-pumpkin-cockroach.sh
+        container: qc.sec_slimy-ruby-chicken
   QC.Sty:
     repos:
       github.com/AtefBN/esgpullUtilties flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.sickly-copper-ferret.sh
-        container: qc.sty_skimpy-asparagus-octopus
+        - /usr/bin/env sh .sqa/script.wiggy-cinnabar-gerbil.sh
+        container: qc.sty_slimy-brown-cat
   QC.Uni:
     repos:
       github.com/AtefBN/esgpullUtilties pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-crimson-rottweiler.sh
-        container: qc.uni_trippy-vermilion-collie
+        - /usr/bin/env sh .sqa/script.skimpy-white-mayfly.sh
+        container: qc.uni_leaky-goldenrod-mongrel
   QC.Ver:
     repos:
       github.com/AtefBN/esgpullUtilties get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-tomato-millipede.sh
-        container: qc.ver_tasty-russet-rhinoceros
+        - /usr/bin/env sh .sqa/script.jumpy-ultramarine-fish.sh
+        container: qc.ver_flabby-sepia-spaniel
 timeout: 5400
