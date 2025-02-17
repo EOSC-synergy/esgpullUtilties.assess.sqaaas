@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/AtefBN/esgpullUtilties:
+      branch: main
+      repo: https://github.com/AtefBN/esgpullUtilties
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/AtefBN/esgpullUtilties git:
+        commands:
+        - /usr/bin/env sh .sqa/script.tasty-teal-walrus.sh
+        container: qc.acc_messy-gamboge-hyena
+  QC.Doc:
+    repos:
+      github.com/AtefBN/esgpullUtilties find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.gimpy-tan-kiwi.sh
+        container: qc.doc_beady-smalt-paradise
+      github.com/AtefBN/esgpullUtilties git:
+        commands:
+        - /usr/bin/env sh .sqa/script.snippy-emerald-dingo.sh
+        container: qc.doc_sloppy-white-horse
+      github.com/AtefBN/esgpullUtilties markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.baggy-myrtle-barb.sh
+        container: qc.doc_ugly-yellow-wolverine
+  QC.Lic:
+    repos:
+      github.com/AtefBN/esgpullUtilties licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.randy-russet-newt.sh
+        container: qc.lic_homely-chestnut-dolphin
+  QC.Sec:
+    repos:
+      github.com/AtefBN/esgpullUtilties bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.gloppy-flax-vole.sh
+        container: qc.sec_goopy-lilac-okapi
+  QC.Sty:
+    repos:
+      github.com/AtefBN/esgpullUtilties flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.sickly-copper-ferret.sh
+        container: qc.sty_skimpy-asparagus-octopus
+  QC.Uni:
+    repos:
+      github.com/AtefBN/esgpullUtilties pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.zippy-crimson-rottweiler.sh
+        container: qc.uni_trippy-vermilion-collie
+  QC.Ver:
+    repos:
+      github.com/AtefBN/esgpullUtilties get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.beady-tomato-millipede.sh
+        container: qc.ver_tasty-russet-rhinoceros
+timeout: 5400
